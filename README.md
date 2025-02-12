@@ -22,13 +22,10 @@ This tool provides an easy way to synchronize Overleaf projects from and to your
 
 ## How To Use
 ### Install
-The package is available via [PyPI](https://pypi.org/project/overleaf-sync/). Just run:
-
 ```
-moritz@github:~/test$ pip3 install overleaf-sync
+$ pipx install ./olcesync    # for community edition
+$ pipx install ./olsync
 ```
-
-That's it! Depending on your local Python installation, you might need to use `pip` instead of `pip3`.
 
 ### Prerequisites
 - Create your project on [Overleaf](https://www.overleaf.com/project), for example a project named `test`. Overleaf-sync is not able to create projects (yet).
@@ -38,6 +35,10 @@ That's it! Depending on your local Python installation, you might need to use `p
 
 ### Usage
 #### Login
+``` shell
+$ olcesync login -s ce_host_name   # login to community edition server at ce_host_name
+```
+
 ```
 moritz@github:~/test$ ols login [--path]
 Login successful. Cookie persisted as `.olauth`. You may now sync your project.

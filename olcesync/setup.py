@@ -11,4 +11,18 @@ setuptools.setup(
     author_email="author@example.com",
     description="A small example package",
     packages=setuptools.find_packages(),
+    install_requires=[
+        'requests==2.*',
+        'beautifulsoup4==4.*',
+        'yaspin==2.*',
+        'python-dateutil~=2.8.1',
+        'click==8.*',
+        'socketIO-client==0.5.7.4',
+        'PySide6==6.*'
+    ],
+    entry_points={
+        'console_scripts': [
+                'olcesync=olcesync.olsync:main'
+        ]
+    }
 )
